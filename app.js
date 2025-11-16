@@ -1,7 +1,7 @@
 const lessons = [
   {id: 'intro',       title: 'Úvod do učebnice'},
   {id: '1-alphabet',  title: 'Abeceda'},
-  {id: '2-substantive', title: 'Podstatná jména'}
+  {id: '2-substantive', title: 'Základy podstatných jmen'}
 ]
 
 const lessons_ids = new Set(lessons.map(l => l.id))
