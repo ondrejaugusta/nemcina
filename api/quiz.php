@@ -64,16 +64,20 @@ if ($method === 'POST' && $action === 'grade') {
     $score = 0;
     $max = count($quiz['questions']);
 
+    $wrong_indices = [];
+
     foreach ($quiz['questions'] as $i => $q) {
         $userAnswer = $answers[$i] ?? null;
         if ($userAnswer !== null && intval($userAnswer) === intval($q['correctIndex'])) {
+            $wrong_indices[] = $i;
             $score++;
         }
     }
 
     echo json_encode([
         'score' => $score,
-        'max' => $max
+        'max' => $max,
+        'wrong' => $wrong_indices
     ]);
     exit;
 }
