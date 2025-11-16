@@ -2,8 +2,8 @@
   --clr-lightmode-bg: #FAF9F6;
   --clr-lightmode-fg: #161616;
 
-  --clr-bookmode-bg: #EFE4CF;
-  --clr-bookmode-fg: #1a1c1a;
+  --clr-bookmode-bg: #EEE9DA;
+  --clr-bookmode-fg: #2F2E2C;
 
   --clr-darkmode-bg: hsl(0, 0%, 9%);
   --clr-darkmode-fg: #FAF9F6;
@@ -63,6 +63,45 @@ body.light {
 body.book {
   background-color: var(--clr-bookmode-bg);
   color: var(--clr-bookmode-fg);
+
+  --clr-bookmode-bg: #F5F2E7;
+  --clr-bookmode-fg: #2B2B2B;
+
+  --clr-anchor: #8A5A3F;          
+  --clr-anchor-visited: #6F4A37; 
+
+  --clr-button-bg: #C3B59F;      
+  --clr-button-fg: #26221A;       
+  --clr-button-bg-hover: #B3A48E; 
+
+  --clr-table-thead-bg: #E0D7C5;  
+  --clr-table-thead-fg: #2B2B2B;
+  --clr-table-tr-border: #D3CCBD; 
+  --clr-header-border: #D3CCBD;
+  --clr-footer-border: #D3CCBD;
+
+  --clr-text-muted: #716558;      
+
+  --clr-modeswitcher-border: #D3CCBD;
+
+  --clr-callout-default-bg: #EEE8DA;
+
+  --clr-callout-note-bg: hsl(47, 47%, 89%);
+  --clr-callout-note-border: #C3B59F;
+
+  --clr-callout-info-bg: #E5EFF5;    
+  --clr-callout-info-border: #5C7488;
+
+  --clr-callout-warning-bg: #FBEDEA;
+  --clr-callout-warning-border: #C56551;
+
+  --clr-quiz-container-bg: #F3EEE1;
+  --clr-quiz-container-border: #D3CCBD;
+
+  --clr-quiz-result-bg: #E0D7C5;       
+  --clr-quiz-result-correct-bg: #C6D8B6; 
+  --clr-quiz-wrong: #D27A7A;
+
 }
 body.dark {
   background-color: var(--clr-darkmode-bg);
