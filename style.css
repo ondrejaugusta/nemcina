@@ -1,3 +1,14 @@
+:root {
+  --clr-lightmode-bg: #FAF9F6;
+  --clr-lightmode-fg: #161616;
+
+  --clr-bookmode-bg: #EFE4CF;
+  --clr-bookmode-fg: #1a1c1a;
+
+  --clr-darkmode-bg: #161616;
+  --clr-darkmode-fg: #FAF9F6;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -10,6 +21,19 @@ body {
   margin: 0 auto;
   padding: 1rem;
   line-height: 1.4;
+}
+
+body.light {
+  background-color: var(--clr-lightmode-bg);
+  color: var(--clr-lightmode-fg);
+}
+body.book {
+  background-color: var(--clr-bookmode-bg);
+  color: var(--clr-bookmode-fg);
+}
+body.dark {
+  background-color: var(--clr-darkmode-bg);
+  color: var(--clr-darkmode-fg);
 }
 
 header {
@@ -83,19 +107,87 @@ table tbody tr:last-of-type {
 }
 
 footer {
+  margin-top: 2rem;
+  border-top: 1px solid #dddddd;
+}
+
+footer,
+footer > div {
   width: 100%;
 }
 
-footer div {
-  margin-top: 2rem;
+footer #lesson-nav div {
   padding-top: 1rem;
-  border-top: 1px solid #dddddd;
   display: flex; 
   justify-content: space-between;
 }
 
-footer div a {
+footer #lesson-nav div a {
   display: inline-block;
+}
+
+footer .info {
+  margin-top: 1rem;
+  font-size: 0.8rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+footer .info p {
+  margin-bottom: 0;
+}
+footer .info .muted,
+footer .info .muted a {
+  color: hsl(0, 0%, 40%);
+}
+
+footer .info .appearance-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+footer .info .appearance-controls a[data-appearance] {
+  display: inline-block;
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 1px solid hsl(0, 0%, 87.5%);
+
+  transition: transform 75ms ease-in-out;
+}
+footer .info .appearance-controls a[data-appearance]:hover {
+  text-decoration: none;
+  transform: scale(1.1);
+}
+
+footer .info .appearance-controls a[data-appearance].active::before {
+  content: "✓";
+  
+  width: 100%;
+  height: 100%;
+
+  font-size: 0.6rem;
+
+  color: inherit;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer .info .appearance-controls a[data-appearance="light"] {
+  background-color: var(--clr-lightmode-bg);
+  color: var(--clr-lightmode-fg);
+}
+footer .info .appearance-controls a[data-appearance="book"] {
+  background-color: var(--clr-bookmode-bg);
+  color: var(--clr-bookmode-fg);
+}
+footer .info .appearance-controls a[data-appearance="dark"] {
+  background-color: var(--clr-darkmode-bg);
+  color: var(--clr-darkmode-fg);
 }
 
 .callout {

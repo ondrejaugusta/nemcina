@@ -8,7 +8,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
-<body>
+<body class="light">
   <header>
     <h1>Učebnice němčiny</h1>
     <!-- <nav>
@@ -19,7 +19,17 @@
   </header>
 
   <main id="content"></main>
-  <footer id="lesson-nav"></footer>
+  <footer>
+    <div id="lesson-nav"></div>
+    <div class="info">
+      <p class="muted">Otevřená učebnice němčiny — <a href="https://github.com/ondrejaugusta/nemcina" target="_blank">GitHub</a></p>
+      <div class="appearance-controls">
+        <a data-appearance="light" title="Světlý režim" class="active"></a>
+        <a data-appearance="book" title="Režim knihy"></a>
+        <a data-appearance="dark" title="Tmavý režim"></a>
+      </div>
+    </div>
+  </footer>
 
   <script src="app.js"></script>
 </body>

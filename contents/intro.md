@@ -35,7 +35,7 @@ V textu se budou objevovat i upozornění. Ta budou rozdělena do tří kategori
 ## 0.2 Disclaimer
 Učebnice je psána ve volném čase a velmi silně čerpá z materiálů, které jsem dostal ve škole (kdysi dávno, před asi šesti lety).
 
-Neplánuji tu tvořit chyby ani nic podobného, ale za občasný výskyt překlepu se omlouvám. Veškeré výtky rád přijmu na adrese [ucebnice@ondrejaugusta.cz](mailto:ucebnice@ondrejaugusta.cz).
+Neplánuji tu tvořit chyby ani nic podobného, ale za občasný výskyt překlepu se omlouvám. Veškeré výtky rád přijmu na adrese [ucebnice@ondrejaugusta.cz](mailto:ucebnice@ondrejaugusta.cz), případně můžete chybu opravit přímo v [GitHubu tohoto projektu](https://github.com/ondrejaugusta/nemcina).
 
 To je ke konceptu celé učebnice všechno.
 

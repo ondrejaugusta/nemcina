@@ -195,8 +195,21 @@ function renderLessonNav(currentId) {
   navEl.innerHTML = html;
 }
 
+function setEventListeners() {
+  const modeSelectors = document.querySelectorAll("a[data-appearance]")
+  for (a of modeSelectors) {
+    a.addEventListener("click", (e) => {
+      document.body.classList = ""
+      document.body.classList.add(e.target.getAttribute("data-appearance"))
 
-window.addEventListener('DOMContentLoaded', loadPage);
+      document.querySelector("a[data-appearance].active").classList.remove("active")
+      e.target.classList.add("active")
+    })
+  }
+}
+
+
+window.addEventListener('DOMContentLoaded', () => { loadPage(); setEventListeners() });
 window.addEventListener('hashchange', loadPage);
 
 console.log(`Grüß dich! Když už jsi tady, prozkoumej spíš mou normální stránku.
