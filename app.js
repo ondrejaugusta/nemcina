@@ -76,7 +76,7 @@ async function enhanceQuizzes(root) {
   for (const el of quizPlaceholders) {
     const id = el.dataset.quizId;
     try {
-      const res = await fetch(`http://localhost:3003/api/quiz.php?action=load&id=${encodeURIComponent(id)}`);
+      const res = await fetch(`/api/quiz/load/${encodeURIComponent(id)}`);
       if (!res.ok) throw new Error('Quiz not found');
       const quiz = await res.json();
       renderQuiz(el, quiz);
@@ -137,7 +137,7 @@ function renderQuiz(container, quiz) {
     try {
       const body = JSON.stringify({ id: quiz.id, answers: answers })
       console.log(body)
-      const res = await fetch('http://localhost:3003/api/quiz.php?action=grade', {
+      const res = await fetch('/api/quiz/grade', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: body
