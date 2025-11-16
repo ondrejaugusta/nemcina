@@ -69,8 +69,9 @@ if ($method === 'POST' && $action === 'grade') {
     foreach ($quiz['questions'] as $i => $q) {
         $userAnswer = $answers[$i] ?? null;
         if ($userAnswer !== null && intval($userAnswer) === intval($q['correctIndex'])) {
-            $wrong_indices[] = $i;
             $score++;
+        } else {
+            $wrong_indices[] = $i;
         }
     }
 
