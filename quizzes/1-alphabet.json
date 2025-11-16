@@ -9,6 +9,33 @@
                 "Píšeme SZ"
             ],
             "correctIndex": 1
+        },
+        {
+            "text": "Jak nahrazujeme ß při zapisování do velkých písmen?",
+            "options": [
+                "Nenahrazujeme",
+                "Píšeme SS",
+                "Píšeme SZ"
+            ],
+            "correctIndex": 1
+        },
+        {
+            "text": "Jak nahrazujeme ß při zapisování do velkých písmen?",
+            "options": [
+                "Nenahrazujeme",
+                "Píšeme SS",
+                "Píšeme SZ"
+            ],
+            "correctIndex": 1
+        },
+        {
+            "text": "Jak nahrazujeme ß při zapisování do velkých písmen?",
+            "options": [
+                "Nenahrazujeme",
+                "Píšeme SS",
+                "Píšeme SZ"
+            ],
+            "correctIndex": 1
         }
     ]
 }

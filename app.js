@@ -90,6 +90,10 @@ function renderQuiz(container, quiz) {
   const form = document.createElement('form');
   form.classList.add('quiz-form');
 
+  heading = document.createElement("h3")
+  heading.classList.add("quiz-heading")
+  heading.textContent = "Kvíz: Otestuj své znalosti"
+
   quiz.questions.forEach((q, qi) => {
     const block = document.createElement('div');
     block.classList.add('quiz-question');
@@ -117,7 +121,7 @@ function renderQuiz(container, quiz) {
 
   const submit = document.createElement('button');
   submit.type = 'submit';
-  submit.textContent = 'Vyhodnotit';
+  submit.textContent = 'Vyhodnotit →';
   form.appendChild(submit);
 
   const result = document.createElement('div');
@@ -148,6 +152,7 @@ function renderQuiz(container, quiz) {
   });
 
   container.innerHTML = '';
+  container.appendChild(heading)
   container.appendChild(form);
   container.appendChild(result);
 }

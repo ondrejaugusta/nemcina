@@ -8,12 +8,17 @@ body {
   font-family: system-ui, sans-serif;
   max-width: min(50rem, 95vw);
   margin: 0 auto;
-  padding: 1.5rem;
+  padding: 1rem;
   line-height: 1.4;
 }
 
 header {
-  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #dddddd;
+}
+header h1 {
+  padding: 0;
+  margin: 0;
 }
 
 nav a {
@@ -25,6 +30,22 @@ a {
 }
 a:hover {
   text-decoration: underline;
+}
+
+button {
+  padding: 0.5rem 1.25rem;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  background-color: hsl(0, 0%, 25%);
+  color: white;
+
+  transition: background-color 150ms ease-in-out;
+}
+button:hover {
+  background-color: hsl(0, 0%, 35%);
 }
 
 h1, h2, h3 {
@@ -109,4 +130,28 @@ footer div a {
 .callout-warning {
   border-color: #c53030;
   background: #fff5f5;
+}
+
+/* quiz styling */
+div[data-quiz-id] {
+  padding: 1rem 1rem;
+  
+  background-color: hsl(0, 0%, 95%);
+  border: 1px solid hsl(0, 0%, 87.5%);
+  border-radius: 4px;
+}
+div[data-quiz-id] > h3.quiz-heading {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0;
+}
+div[data-quiz-id] div.quiz-question {
+  margin-bottom: 0.75rem;
+}
+div[data-quiz-id] div.quiz-question > p {
+  margin-bottom: 0.25rem;
+}
+div[data-quiz-id] div.quiz-question > label {
+  display: block;
+  cursor: pointer;
 }
