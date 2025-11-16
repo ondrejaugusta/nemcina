@@ -135,8 +135,8 @@ body.dark {
   --clr-callout-note-border: hsl(0, 0%, 60%);
   --clr-callout-info-bg: hsl(213, 100%, 16%);
   --clr-callout-info-border: hsl(213, 100%, 70%);
-  --clr-callout-warning-bg: hsl(0, 100%, 17%);
-  --clr-callout-warning-border: hsl(0, 100%, 70%);
+  --clr-callout-warning-bg: hsl(343, 71%, 27%);
+  --clr-callout-warning-border: hsl(343, 70%, 39%);
 
   --clr-quiz-container-bg: hsl(0, 0%, 20%);
   --clr-quiz-container-border: hsl(0, 0%, 25%);
@@ -200,6 +200,9 @@ p {
   margin-bottom: 0.5rem;
 }
 
+ul, ol {
+  list-style-position: inside;
+}
 
 table {
     border-collapse: collapse;

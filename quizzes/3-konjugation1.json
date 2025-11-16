@@ -1,0 +1,35 @@
+{
+    "id": "3-konjugation1",
+    "questions": [
+        {
+            "text": "Jaký je slovesný kmen ze slovesa machen (= dělat)?",
+            "options": ["mac-", "mach-", "mache-"],
+            "correctIndex": 1
+        },
+        {
+            "text": "Jaký je správný tvar slovesa malen (= malovat) ve druhé osobě čísla množného?",
+            "options": ["malen", "malst", "malt"],
+            "correctIndex": 2
+        },
+        {
+            "text": "Zvolte správnou kombinaci (aus|machen = něco domluvit):",
+            "options": ["ich macht aus", "wir ausmache", "du ausmachst", "Sie machen aus"],
+            "correctIndex": 3
+        },
+        {
+            "text": "Pro první osobu čísla množného platí: správný tvar slovesa \"sein\" je \"seid\".",
+            "options": ["Ano", "Ne"],
+            "correctIndex": 1
+        },
+        {
+            "text": "Jaký je správný tvar slovesa werden ve třetí osobě čísla jednotného?",
+            "options": ["wirde", "werdet", "wird", "wirt"],
+            "correctIndex": 2
+        },
+        {
+            "text": "Jaká je pravidelně správná koncovka slovesa pro zájmeno es?",
+            "options": ["-t", "-st", "-e", "-en"],
+            "correctIndex": 0
+        }
+    ]
+}
