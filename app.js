@@ -1,6 +1,7 @@
 const lessons = [
   {id: 'intro',       title: 'Úvod do učebnice'},
-  {id: '1-alphabet',  title: 'Abeceda'}
+  {id: '1-alphabet',  title: 'Abeceda'},
+  {id: '2-substantive', title: 'Podstatná jména'}
 ]
 
 const lessons_ids = new Set(lessons.map(l => l.id))
@@ -31,7 +32,7 @@ async function loadPage() {
     renderLessonNav(page);
     if (lessons_ids.has(page)) saveProgress(page);
   } catch (err) {
-    contentEl.innerHTML = `<p>Chyba při načítání stránky: ${err.message}</p>`;
+    contentEl.innerHTML = `<p style='margin-top:2rem;margin-bottom:0;font-weight:bold;'>Chyba při načítání stránky: ${err.message}</p>`;
     renderLessonNav(null);
   }
 }

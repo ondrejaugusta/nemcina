@@ -15,4 +15,4 @@ Jedinou velkou změnou je výskyt tzv. přehlasovaných samohlásek ä, ö a ü 
 >
 > Kupř. tedy groß (velký) majuskulemi zapíšeme jako GROSS.
 
-[quiz id="1-alphabet"]
+**Kvíz se tvoří pomocí shortcode [quiz] a id="".**
