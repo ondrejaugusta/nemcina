@@ -18,5 +18,3 @@ Jedinou velkou změnou je výskyt tzv. přehlasovaných samohlásek ä, ö a ü 
 > Při zápisu do velkých písmen pak ß nahrazujeme zdvojeným S.
 >
 > Kupř. tedy groß (velký) majuskulemi zapíšeme jako GROSS.
-
-**Kvíz se tvoří pomocí shortcode [quiz] a id="".**
