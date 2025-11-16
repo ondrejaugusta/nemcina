@@ -19,6 +19,7 @@
   --clr-table-thead-fg: var(--clr-lightmode-bg);
   --clr-table-tr-border: #dddddd;
 
+  --clr-header-border: #dddddd;
   --clr-footer-border: #dddddd;
 
   --clr-text-muted: hsl(0, 0%, 40%);
@@ -75,11 +76,12 @@ body.dark {
   --clr-table-thead-fg: var(--clr-darkmode-bg);
   --clr-table-tr-border: hsl(0, 0%, 20%);
 
+  --clr-header-border: hsl(0, 0%, 20%);
   --clr-footer-border: hsl(0, 0%, 20%);
 
   --clr-text-muted: hsl(0, 0%, 60%);
 
-  --clr-modeswitcher-border: hsl(0, 0%, 15%);
+  --clr-modeswitcher-border: hsl(0, 0%, 20%);
 
   --clr-callout-default-bg: hsl(0, 0%, 15%);
 
@@ -96,7 +98,7 @@ body.dark {
 
 header {
   padding-bottom: 1rem;
-  border-bottom: 1px solid #dddddd;
+  border-bottom: 1px solid var(--clr-header-border);
 }
 header h1 {
   padding: 0;
@@ -161,11 +163,11 @@ table td {
 
 
 table tbody tr {
-    border-bottom: 1px solid var(--clr-table-tr-border-color);
+    border-bottom: 1px solid var(--clr-table-tr-border);
 }
 
 table tbody tr:last-of-type {
-    border-bottom: 2px solid hsl(0, 0%, 25%);
+    border-bottom: 2px solid var(--clr-table-tr-border);
 }
 
 footer {

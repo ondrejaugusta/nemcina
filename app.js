@@ -196,15 +196,32 @@ function renderLessonNav(currentId) {
 }
 
 function setEventListeners() {
+  let availableModes = []
   const modeSelectors = document.querySelectorAll("a[data-appearance]")
   for (a of modeSelectors) {
+    availableModes.push(a.getAttribute("data-appearance"))
     a.addEventListener("click", (e) => {
       document.body.classList = ""
       document.body.classList.add(e.target.getAttribute("data-appearance"))
 
       document.querySelector("a[data-appearance].active").classList.remove("active")
       e.target.classList.add("active")
+
+      setCookie("appearance", e.target.getAttribute("data-appearance"), 365)
     })
+  }
+
+  checkModeCookie(availableModes)
+}
+
+function checkModeCookie(availableModes) {
+  let c = getCookie("appearance")
+  if (c != "" && availableModes.includes(c)) {
+    document.body.classList = ""
+    document.body.classList.add(c)
+
+    document.querySelector("a[data-appearance].active").classList.remove("active")
+    document.querySelector(`a[data-appearance='${c}']`).classList.add("active")
   }
 }
 
@@ -216,3 +233,27 @@ console.log(`Grüß dich! Když už jsi tady, prozkoumej spíš mou normální s
 
 %cOndřej Aleš Augusta
 %chttps://ondrejaugusta.cz | hello@ondrejaugusta.cz`, 'font-weight: bold;font-size:1.25rem', 'font-weight: normal;')
+
+// helper functions stolen from W3S https://www.w3schools.com/js/js_cookies.asp
+function getCookie(cname) {
+  let name = cname + "=";
+  let decodedCookie = decodeURIComponent(document.cookie);
+  let ca = decodedCookie.split(';');
+  for(let i = 0; i <ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+
+function setCookie(cname, cvalue, exdays) {
+  const d = new Date();
+  d.setTime(d.getTime() + (exdays*24*60*60*1000));
+  let expires = "expires="+ d.toUTCString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
