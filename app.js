@@ -3,6 +3,8 @@ const lessons = [
   {id: '1-alphabet',  title: 'Abeceda'}
 ]
 
+const lessons_ids = new Set(lessons.map(l => l.id))
+
 const BASE_URL = "https://nemcina.ondrejaugusta.cz"
 
 function getCurrentPage() {
@@ -13,6 +15,7 @@ function getCurrentPage() {
 async function loadPage() {
   const page = getCurrentPage();
   const contentEl = document.getElementById('content');
+
 
   try {
     const res = await fetch(`contents/${page}.md`);
@@ -26,6 +29,7 @@ async function loadPage() {
     enhanceCallouts(contentEl);
     enhanceQuizzes(contentEl);
     renderLessonNav(page);
+    if (lessons_ids.has(page)) saveProgress(page);
   } catch (err) {
     contentEl.innerHTML = `<p>Chyba při načítání stránky: ${err.message}</p>`;
     renderLessonNav(null);
@@ -244,8 +248,18 @@ function checkModeCookie(availableModes) {
   }
 }
 
+function progressSaved() {
+  const progress = getCookie("progress")
+  if (progress && window.location.hash.length == 0) {
+    history.pushState(null, null, `#${progress}`);
+  }
+  return
+}
+function saveProgress(page) {
+  setCookie("progress", page, 365)
+}
 
-window.addEventListener('DOMContentLoaded', () => { loadPage(); setEventListeners() });
+window.addEventListener('DOMContentLoaded', () => { progressSaved(); loadPage(); setEventListeners() });
 window.addEventListener('hashchange', loadPage);
 
 console.log(`Grüß dich! Když už jsi tady, prozkoumej spíš mou normální stránku.
@@ -275,4 +289,13 @@ function setCookie(cname, cvalue, exdays) {
   d.setTime(d.getTime() + (exdays*24*60*60*1000));
   let expires = "expires="+ d.toUTCString();
   document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+// helper functions moje :3
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: 'smooth'
+  });
 }
