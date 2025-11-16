@@ -1,3 +1,0 @@
-order deny,allow
-deny from all
-allow from nemcina.ondrejaugusta.cz
