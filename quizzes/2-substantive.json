@@ -1,0 +1,25 @@
+{
+    "id": "2-substantive",
+    "questions": [
+        {
+            "text": "Jaký je určitý člen pro rod střední, číslo jednotné?",
+            "options": ["der", "die", "das"],
+            "correctIndex": 2
+        },
+        {
+            "text": "Jaký je neurčitý člen pro číslo množné?",
+            "options": ["ein", "eine", "takový člen neexistuje"],
+            "correctIndex": 2
+        },
+        {
+            "text": "Pokud je strom německy der Baum, jak zní jeho neurčitá varianta?",
+            "options": ["ein Baum", "eine Baum"],
+            "correctIndex": 0
+        },
+        {
+            "text": "Pokud je auto německy ein Auto, jak zní na základě tohoto předpokladu jeho určitá varianta?",
+            "options": ["der", "die", "das", "na základě tohoto předpokladu nelze určitý člen jednoznačně určit"],
+            "correctIndex": 3
+        }
+    ]
+}

@@ -37,3 +37,5 @@ Pro **číslo jednotné** určujeme tyto členy:
 | Žena | die Frau | eine Frau |
 | Dítě | das Baby | ein Baby |
 | Děti | die Babys | Babys |
+
+[quiz id="2-substantive"]
