@@ -148,7 +148,7 @@ Zde pozor na změnu hlásky *e* na *i* ve druhé a třetí osobě čísla jednot
 >
 > Bohužel je to s němčinou jako s jakýmkoliv jiným jazykem — pravidla je třeba se učit nazpamět a je třeba je neustále procvičovat.
 >
-> Chtěl bych trochu motivovat čtenáře: zdaleka nejefektivnější metodou učení je mluvení. Nezáleží na tom, jak dobře / špatně zníte (nebo si myslíte, že zníte, realita je často o poznání odlišná), hlavní je, že mluvíte. S plyšákem, se zdí, s kamarádem, s rodiči.
+> Chtěl bych trochu motivovat čtenáře: zdaleka nejefektivnější metodou učení je mluvení. Nezáleží na tom, jak dobře / špatně zníte (nebo si myslíte, že zníte, realita je často o poznání lepší), hlavní je, že mluvíte. S plyšákem, se zdí, s kamarádem, s rodiči.
 >
 > Jen mluvením si pravidla osvojíte. Tak se nebojte a mluvte. :)
 
