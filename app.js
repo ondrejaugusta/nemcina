@@ -7,6 +7,8 @@ const lessons = [
 const lessons_ids = new Set(lessons.map(l => l.id))
 
 const BASE_URL = "https://nemcina.ondrejaugusta.cz"
+const BASE_TITLE = "Otevřená učebnice němčiny"
+const SEPARATOR = "—"
 
 function getCurrentPage() {
   const hash = window.location.hash.slice(1);
@@ -32,9 +34,17 @@ async function loadPage() {
     enhanceQuizzes(contentEl);
     renderLessonNav(page);
     if (lessons_ids.has(page)) saveProgress(page);
+    const lesson_name = lessons.find(l => l.id === page)?.title
+    if (lesson_name) {
+      updateTitle(`${lesson_name} ${SEPARATOR} ${BASE_TITLE}`)
+    } else {
+      const firstHeading = contentEl.querySelector("h1")?.textContent
+      updateTitle(`${firstHeading} ${SEPARATOR} ${BASE_TITLE}`)
+    }
   } catch (err) {
     contentEl.innerHTML = `<p style='margin-top:2rem;margin-bottom:0;font-weight:bold;'>Chyba při načítání stránky: ${err.message}</p>`;
     renderLessonNav(null);
+    updateTitle(BASE_TITLE)
   }
 }
 
@@ -300,4 +310,8 @@ function scrollToTop() {
     left: 0,
     behavior: 'smooth'
   });
+}
+
+function updateTitle(newTitle) {
+  document.title = newTitle
 }
