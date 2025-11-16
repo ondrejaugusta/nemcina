@@ -245,6 +245,9 @@ footer #lesson-nav div {
 footer #lesson-nav div a {
   display: inline-block;
 }
+footer #lesson-nav div a.next {
+  text-align: right;
+}
 
 footer .info {
   margin-top: 1rem;
