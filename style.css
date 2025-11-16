@@ -5,8 +5,37 @@
   --clr-bookmode-bg: #EFE4CF;
   --clr-bookmode-fg: #1a1c1a;
 
-  --clr-darkmode-bg: #161616;
+  --clr-darkmode-bg: hsl(0, 0%, 9%);
   --clr-darkmode-fg: #FAF9F6;
+
+  --clr-anchor: hsl(10, 73%, 47%);
+  --clr-anchor-visited: hsl(10, 73%, 38%);
+
+  --clr-button-bg: hsl(0,0%,25%);
+  --clr-button-fg: var(--clr-lightmode-bg);
+  --clr-button-bg-hover: hsl(0, 0%, 35%);
+
+  --clr-table-thead-bg: hsl(0, 0%, 25%);
+  --clr-table-thead-fg: var(--clr-lightmode-bg);
+  --clr-table-tr-border: #dddddd;
+
+  --clr-footer-border: #dddddd;
+
+  --clr-text-muted: hsl(0, 0%, 40%);
+
+  --clr-modeswitcher-border: hsl(0, 0%, 87.5%);
+
+  --clr-callout-default-bg: #f5f5f5;
+
+  --clr-callout-note-bg: hsl(0, 0%, 95%);
+  --clr-callout-note-border: hsl(0, 0%, 25%);
+  --clr-callout-info-bg: hsl(213, 100%, 96%);
+  --clr-callout-info-border: hsl(211, 61%, 43%);
+  --clr-callout-warning-bg: #fff5f5;
+  --clr-callout-warning-border: #c53030;
+
+  --clr-quiz-container-bg: hsl(0, 0%, 95%);
+  --clr-quiz-container-border: hsl(0, 0%, 87.5%);
 }
 
 * {
@@ -34,6 +63,35 @@ body.book {
 body.dark {
   background-color: var(--clr-darkmode-bg);
   color: var(--clr-darkmode-fg);
+
+  --clr-anchor: hsl(10, 73%, 57%);
+  --clr-anchor-visited: hsl(10, 73%, 48%);
+
+  --clr-button-bg: hsl(0,0%,75%);
+  --clr-button-fg: var(--clr-darkmode-bg);
+  --clr-button-bg-hover: hsl(0, 0%, 65%);
+
+  --clr-table-thead-bg: hsl(0, 0%, 75%);
+  --clr-table-thead-fg: var(--clr-darkmode-bg);
+  --clr-table-tr-border: hsl(0, 0%, 20%);
+
+  --clr-footer-border: hsl(0, 0%, 20%);
+
+  --clr-text-muted: hsl(0, 0%, 60%);
+
+  --clr-modeswitcher-border: hsl(0, 0%, 15%);
+
+  --clr-callout-default-bg: hsl(0, 0%, 15%);
+
+  --clr-callout-note-bg: hsl(0, 0%, 20%);
+  --clr-callout-note-border: hsl(0, 0%, 60%);
+  --clr-callout-info-bg: hsl(213, 100%, 16%);
+  --clr-callout-info-border: hsl(213, 100%, 70%);
+  --clr-callout-warning-bg: hsl(0, 100%, 17%);
+  --clr-callout-warning-border: hsl(0, 100%, 70%);
+
+  --clr-quiz-container-bg: hsl(0, 0%, 20%);
+  --clr-quiz-container-border: hsl(0, 0%, 25%);
 }
 
 header {
@@ -51,9 +109,13 @@ nav a {
 
 a {
   text-decoration: none;
+  color: var(--clr-anchor);
 }
 a:hover {
   text-decoration: underline;
+}
+a:visited {
+  color: var(--clr-anchor-visited);
 }
 
 button {
@@ -63,13 +125,13 @@ button {
   outline: none;
   cursor: pointer;
 
-  background-color: hsl(0, 0%, 25%);
-  color: white;
+  background-color: var(--clr-button-bg);
+  color: var(--clr-button-fg);
 
   transition: background-color 150ms ease-in-out;
 }
 button:hover {
-  background-color: hsl(0, 0%, 35%);
+  background-color: var(--clr-button-bg-hover)
 }
 
 h1, h2, h3 {
@@ -88,8 +150,8 @@ table {
     font-family: sans-serif;
 }
 table thead tr {
-    background-color: hsl(0, 0%, 25%);
-    color: #ffffff;
+    background-color: var(--clr-table-thead-bg);
+    color: var(--clr-table-thead-fg);
     text-align: left;
 }
 table th,
@@ -99,7 +161,7 @@ table td {
 
 
 table tbody tr {
-    border-bottom: 1px solid #dddddd;
+    border-bottom: 1px solid var(--clr-table-tr-border-color);
 }
 
 table tbody tr:last-of-type {
@@ -108,7 +170,7 @@ table tbody tr:last-of-type {
 
 footer {
   margin-top: 2rem;
-  border-top: 1px solid #dddddd;
+  border-top: 1px solid var(--clr-footer-border);
 }
 
 footer,
@@ -139,7 +201,7 @@ footer .info p {
 }
 footer .info .muted,
 footer .info .muted a {
-  color: hsl(0, 0%, 40%);
+  color: var(--clr-text-muted);
 }
 
 footer .info .appearance-controls {
@@ -153,7 +215,7 @@ footer .info .appearance-controls a[data-appearance] {
   height: 1.2rem;
   border-radius: 50%;
   cursor: pointer;
-  border: 1px solid hsl(0, 0%, 87.5%);
+  border: 1px solid var(--clr-modeswitcher-border);
 
   transition: transform 75ms ease-in-out;
 }
@@ -195,7 +257,7 @@ footer .info .appearance-controls a[data-appearance="dark"] {
   padding: 0.75rem 1rem;
   margin: 1rem 0;
   border-radius: 4px;
-  background: #f5f5f5;
+  background: var(--clr-callout-default-bg);
   
   font-size: 0.9rem;
 }
@@ -210,26 +272,26 @@ footer .info .appearance-controls a[data-appearance="dark"] {
 }
 
 .callout-note {
-  border-color: hsl(0, 0%, 25%);
-  background: hsl(0, 0%, 95%);
+  border-color: var(--clr-callout-note-border);
+  background: var(--clr-callout-note-bg);
 }
 
 .callout-info {
-  border-color: hsl(211, 61%, 43%);
-  background: hsl(213, 100%, 96%);
+  border-color: var(--clr-callout-info-border);
+  background: var(--clr-callout-info-bg);
 }
 
 .callout-warning {
-  border-color: #c53030;
-  background: #fff5f5;
+  border-color: var(--clr-callout-warning-border);
+  background: var(--clr-callout-warning-bg);
 }
 
 /* quiz styling */
 div[data-quiz-id] {
   padding: 1rem 1rem;
   
-  background-color: hsl(0, 0%, 95%);
-  border: 1px solid hsl(0, 0%, 87.5%);
+  background-color: var(--clr-quiz-container-bg);
+  border: 1px solid var(--clr-quiz-container-border);
   border-radius: 4px;
 }
 div[data-quiz-id] > h3.quiz-heading {
