@@ -1,0 +1,14 @@
+{
+    "id": "1-alphabet",
+    "questions": [
+        {
+            "text": "Jak nahrazujeme ß při zapisování do velkých písmen?",
+            "options": [
+                "Nenahrazujeme",
+                "Píšeme SS",
+                "Píšeme SZ"
+            ],
+            "correctIndex": 1
+        }
+    ]
+}
