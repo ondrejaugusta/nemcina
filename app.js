@@ -159,7 +159,13 @@ function renderQuiz(container, quiz) {
       }
 
       result.textContent = `Výsledek: ${data.score} / ${data.max}`;
+      if (data.score == data.max) {
+        result.classList.add("correct")
+      } else if (result.classList.contains("correct")) {
+        result.classList.remove("correct")
+      }
     } catch (err) {
+      if (result.classList.contains("correct")) result.classList.remove("correct")
       result.textContent = 'Test se nepodařilo vyhodnotit.';
     }
   });

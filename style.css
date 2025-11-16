@@ -37,7 +37,9 @@
 
   --clr-quiz-container-bg: hsl(0, 0%, 95%);
   --clr-quiz-container-border: hsl(0, 0%, 87.5%);
-  --clr-quiz-wrong: #c53030;
+  --clr-quiz-result-bg: hsl(0, 0%, 85%);
+  --clr-quiz-result-correct-bg: hsl(109, 49%, 77%);
+  --clr-quiz-wrong: hsl(0, 61%, 48%);
 }
 
 * {
@@ -95,6 +97,9 @@ body.dark {
 
   --clr-quiz-container-bg: hsl(0, 0%, 20%);
   --clr-quiz-container-border: hsl(0, 0%, 25%);
+  --clr-quiz-result-bg: hsl(0, 0%, 40%);
+  --clr-quiz-result-correct-bg: hsl(109, 100%, 20%);
+  --clr-quiz-wrong: hsl(0, 61%, 58%);
 }
 
 header {
@@ -314,4 +319,20 @@ div[data-quiz-id] div.quiz-question > p.wrong {
 div[data-quiz-id] div.quiz-question > label {
   display: block;
   cursor: pointer;
+}
+div[data-quiz-id] div.quiz-result {
+  padding: 0.25rem 0.75rem;
+  background-color: var(--clr-quiz-result-bg);
+  border-radius: 4px;
+  width: 100%;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+div[data-quiz-id] div.quiz-result:empty {
+  padding: 0;
+  margin: 0;
+  height: 0;
+}
+div[data-quiz-id] div.quiz-result.correct {
+  background-color: var(--clr-quiz-result-correct-bg);
 }
