@@ -1,3 +1,7 @@
+> [!INFO]
+>
+> Tato kapitola není dodělaná.
+
 # 1. Abeceda
 
 Němčina má velmi podobnou abecedu té české.
