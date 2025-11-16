@@ -3,6 +3,8 @@ const lessons = [
   {id: '1-alphabet',  title: 'Abeceda'}
 ]
 
+const BASE_URL = "https://nemcina.ondrejaugusta.cz"
+
 function getCurrentPage() {
   const hash = window.location.hash.slice(1);
   return hash || 'intro';
@@ -76,7 +78,7 @@ async function enhanceQuizzes(root) {
   for (const el of quizPlaceholders) {
     const id = el.dataset.quizId;
     try {
-      const res = await fetch(`/api/quiz/load/${encodeURIComponent(id)}`);
+      const res = await fetch(`${BASE_URL}/api/quiz/load/${encodeURIComponent(id)}`);
       if (!res.ok) throw new Error('Quiz not found');
       const quiz = await res.json();
       renderQuiz(el, quiz);
@@ -90,7 +92,7 @@ function renderQuiz(container, quiz) {
   const form = document.createElement('form');
   form.classList.add('quiz-form');
 
-  heading = document.createElement("h3")
+  const heading = document.createElement("h3")
   heading.classList.add("quiz-heading")
   heading.textContent = "Kvíz: Otestuj své znalosti"
 
@@ -137,13 +139,24 @@ function renderQuiz(container, quiz) {
     try {
       const body = JSON.stringify({ id: quiz.id, answers: answers })
       console.log(body)
-      const res = await fetch('/api/quiz/grade', {
+      const res = await fetch(`${BASE_URL}/api/quiz/grade`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: body
       });
       if (!res.ok) throw new Error('Chyba při odesílání odpovědí');
       const data = await res.json();
+
+      const questions = form.querySelectorAll(".quiz-question > p")
+      questions.forEach(q => {
+        if (q.classList.contains("wrong")) q.classList.remove("wrong")
+      })
+
+      if (data.wrong.length > 0) {
+        data.wrong.forEach(i => {
+          questions[i].classList.add("wrong")
+        })
+      }
 
       result.textContent = `Výsledek: ${data.score} / ${data.max}`;
     } catch (err) {
@@ -198,16 +211,16 @@ function renderLessonNav(currentId) {
 function setEventListeners() {
   let availableModes = []
   const modeSelectors = document.querySelectorAll("a[data-appearance]")
-  for (a of modeSelectors) {
+  for (const a of modeSelectors) {
     availableModes.push(a.getAttribute("data-appearance"))
     a.addEventListener("click", (e) => {
-      document.body.classList = ""
-      document.body.classList.add(e.target.getAttribute("data-appearance"))
+      document.body.className = ""
+      document.body.classList.add(e.currentTarget.getAttribute("data-appearance"))
 
       document.querySelector("a[data-appearance].active").classList.remove("active")
       e.target.classList.add("active")
 
-      setCookie("appearance", e.target.getAttribute("data-appearance"), 365)
+      setCookie("appearance", e.currentTarget.getAttribute("data-appearance"), 365)
     })
   }
 
@@ -217,7 +230,7 @@ function setEventListeners() {
 function checkModeCookie(availableModes) {
   let c = getCookie("appearance")
   if (c != "" && availableModes.includes(c)) {
-    document.body.classList = ""
+    document.body.className = ""
     document.body.classList.add(c)
 
     document.querySelector("a[data-appearance].active").classList.remove("active")

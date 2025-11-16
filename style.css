@@ -37,6 +37,7 @@
 
   --clr-quiz-container-bg: hsl(0, 0%, 95%);
   --clr-quiz-container-border: hsl(0, 0%, 87.5%);
+  --clr-quiz-wrong: #c53030;
 }
 
 * {
@@ -306,6 +307,9 @@ div[data-quiz-id] div.quiz-question {
 }
 div[data-quiz-id] div.quiz-question > p {
   margin-bottom: 0.25rem;
+}
+div[data-quiz-id] div.quiz-question > p.wrong {
+  color: var(--clr-quiz-wrong);
 }
 div[data-quiz-id] div.quiz-question > label {
   display: block;
