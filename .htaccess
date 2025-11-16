@@ -1,0 +1,7 @@
+RewriteEngine On
+
+RewriteCond %{HTTPS} !=on
+RewriteRule ^(.*) https://%{SERVER_NAME}/$1 [R=301,L] 
+
+RewriteRule ^api/quiz/load/(.+)$ ./api/quiz.php?action=load&id=$1
+RewriteRule ^api/quiz/grade$ ./api/quiz.php?action=grade
