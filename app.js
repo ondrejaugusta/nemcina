@@ -17,6 +17,7 @@ async function loadPage() {
   const page = getCurrentPage();
   const contentEl = document.getElementById('content');
 
+  scrollToTop();
 
   try {
     const res = await fetch(`contents/${page}.md`);
