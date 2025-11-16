@@ -239,6 +239,7 @@ footer #lesson-nav div {
   padding-top: 1rem;
   display: flex; 
   justify-content: space-between;
+  gap: 0.5rem; /* ensure a gap between navigation elements */
 }
 
 footer #lesson-nav div a {
