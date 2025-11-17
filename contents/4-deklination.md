@@ -26,6 +26,8 @@ Prozatím si vystačíme s běžným skloňováním. Zavedeme si několik pojmů
 >
 > [člen] [slovo], [změny v množném čísle]
 >
+> &nbsp;
+>
 > Tedy například *der Mann, ä-er* je v jednotném čísle (*Singular*, zkratka Sg) *der Mann*, v množném čísle (*Plural*, zkratka Pl) se z *a* stává *ä*, na konec "přilepíme" koncovku *-er* a vyměníme člen (v množném vždy *die*) – vznikne tedy *die Männer*.
 >
 > Pokud je uvedena jen koncovka (*die Frau, -en*), pak se mění jen ta (+ člen): *die Frau* → *die Frauen*.
