@@ -80,11 +80,12 @@ function enhanceShortcodes(root) {
   // najdi <p>[quiz id="..."]</p>
   const paragraphs = root.querySelectorAll('p');
   paragraphs.forEach(p => {
-    const m = p.textContent.trim().match(/^\[quiz\s+id="(.+?)"\]$/);
+    const m = p.textContent.trim().match(/^\[quiz\s+id="(.+?)"\s*(intermediary)?\]$/);
     if (!m) return;
 
     const div = document.createElement('div');
     div.setAttribute('data-quiz-id', m[1]);
+    if (m[2] !== undefined) div.setAttribute('data-quiz-intermediary', 'true')
     div.classList.add('quiz-placeholder');
     p.replaceWith(div);
   });
@@ -99,20 +100,24 @@ async function enhanceQuizzes(root) {
       const res = await fetch(`${BASE_URL}/api/quiz/load/${encodeURIComponent(id)}`);
       if (!res.ok) throw new Error('Quiz not found');
       const quiz = await res.json();
-      renderQuiz(el, quiz);
+      renderQuiz(el, quiz, el.dataset.quizIntermediary ? true : false);
     } catch (err) {
       el.textContent = 'Test se nepodařilo načíst.';
     }
   }
 }
 
-function renderQuiz(container, quiz) {
+function renderQuiz(container, quiz, intermediary) {
   const form = document.createElement('form');
   form.classList.add('quiz-form');
 
   const heading = document.createElement("h3")
   heading.classList.add("quiz-heading")
-  heading.textContent = "Kvíz: Otestuj své znalosti"
+  if (!intermediary) {
+    heading.textContent = "Závěrečný kvíz: Otestuj své znalosti"
+  } else {
+    heading.textContent = "Průběžný kvíz"
+  }
 
   quiz.questions.forEach((q, qi) => {
     const block = document.createElement('div');

@@ -38,4 +38,4 @@ Prozatím si vystačíme s běžným skloňováním. Zavedeme si několik pojmů
 >
 > Pokud je uvedeno slovo s Pl variantou *x*, pak takové slovo **nemá** pluralizovanou variantu, existuje tedy jen v jednotném čísle. Naopak, pokud je slovo zapsáno jako *-e x, [...]*, existuje takové slovo pouze ve své pluralizované formě a nedisponuje singulární variantou (v češtině je k tomuto ekvivalentní podstatné jméno pomnožné). Příkladem těchto slov buďte *-e Ruhe, x* (= klid) a *-e x, Eltern* (= rodiče).
 
-[quiz id="4-mini-plurals"]
+[quiz id="4-mini-plurals" intermediary]
