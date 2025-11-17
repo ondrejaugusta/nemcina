@@ -1,0 +1,20 @@
+{
+    "id": "4-mini-plurals",
+    "questions": [
+        {
+            "text": "Převeďte do množného čísla: das Auto, -s (= auto)",
+            "options": ["Auto-s", "die Auto", "die Autos", "pouze jednotná varianta", "toto slovo už je v množném čísle"],
+            "correctIndex": 2
+        },
+        {
+            "text": "Převeďte do množného čísla: die x, Geschwister (= sourozenci)",
+            "options": ["die Geschwistern", "der Geschwister", "der Geschwist", "pouze jednotná varianta", "toto slovo už je v množném čísle"],
+            "correctIndex": 4
+        },
+        {
+            "text": "Převeďte do množného čísla: der Schutz, x (= ochrana)",
+            "options": ["die Schütze", "die Schutzen", "der Schütz", "pouze jednotná varianta", "toto slovo už je v množném čísle"],
+            "correctIndex": 3
+        }
+    ]
+}
