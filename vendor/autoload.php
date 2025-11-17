@@ -3,7 +3,7 @@
 spl_autoload_register(function ($class) {
     $prefix = 'Ucebnice\\';
 
-    $base_dir = __DIR__ . '../src/Ucebnice/';
+    $base_dir = __DIR__ . '/../src/Ucebnice/';
 
     $len = strlen($prefix);
     if (strncmp($prefix, $class, $len) !== 0) {
