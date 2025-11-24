@@ -8,7 +8,7 @@ Němčina rozlišuje narozdíl od češtiny jen **čtyři pády**:
 | 3.  | Komu?       | Wem?      | der Dativ     |
 | 4.  | Koho? Co?   | Wen? Was? | der Akkusativ | 
 
-Zato existuje tzv. **slabé skloňování** (nepravidelné), zvané také *n-Deklination*. Více k nepravidelnému až v částí 4.2.
+Zato existuje tzv. **slabé skloňování** (nepravidelné), zvané také *n-Deklination*. Více k nepravidelnému až v části 4.2.
 
 ## 4.1 Pravidelné (silné) skloňování
 
@@ -19,6 +19,7 @@ Prozatím si vystačíme s běžným skloňováním. Zavedeme si několik pojmů
 - der Mann, ä-er = muž,
 - die Frau, -en = žena,
 - das Baby, -s = dítě.
+- der Ondra, -s = easter egg
 
 > [!NOTE] Zápis
 >
